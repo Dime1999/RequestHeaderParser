@@ -31,7 +31,7 @@ app.get("/api/whoami", (req, res) => {
   res.json(resObj);
 });
 
-//Recieves the api request and displays the user's location information
+//Receives the api request and displays the user's location information
 app.get("/api/whereami", (req, res) => {
   //Lines 57 tp 67 are from https://rapidapi.com/blog/geolocation-backend-node-express/
   var location = unirest("GET",
@@ -49,7 +49,7 @@ app.get("/api/whereami", (req, res) => {
 });
 
 
-//listens for requests
+//Deploys the website to a local server
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
 });
